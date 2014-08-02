@@ -1,0 +1,108 @@
+// Font sizes ---------------------------------------------
+
+h1 { font-size: 		3.5rem;}
+h2 { font-size: 		2rem; }
+h3 { font-size: 		1.75rem; }
+h4 { font-size: 		1.5rem; }
+h5 { font-size: 		1.2rem; }
+
+// --------------------------------------------------------
+p, a, li, label, input, #{headings()}, th, td {
+	font-family: Helvetica, Arial, sans-serif;
+	color: $l_gray;
+	font-size: 1.2rem;
+}
+
+a { 
+	text-decoration: none; 
+	color: $blue;
+	&:hover {
+		text-decoration: underline;
+		color: darken($blue, 5%);
+	}
+}
+
+// Buttons -----------------------------------------------
+
+.btn {
+	position: relative;
+	display: block;
+	width: 100%;
+	font-size: 1.3rem;
+	color: white;
+	background: $gray;
+	text-decoration: none;
+	@include border-radius($border-radius);
+	cursor: pointer;
+
+		i {
+			padding-right: 20px;
+	}
+}
+
+.btn-log {
+	width: 100%;
+	height: 55px;
+	line-height: $input_height;
+}
+
+
+.btn-yellow {
+	background: $yellow;
+	&:hover {
+		@include transition(all, 0.2s);
+		background: darken($yellow, $hover-change);
+	}
+}
+
+.btn-blue {
+	background:  $blue;
+	&:hover {
+		@include transition(all, 0.2s);
+		background: darken($blue, $hover-change);
+	}
+}
+
+.btn-red {
+	background:  $red;
+	&:hover {
+		@include transition(all, 0.2s);
+		background: darken($red, $hover-change);
+	}
+}
+
+.btn-small {
+	margin-top: 20px;
+	text-decoration: none;
+	color: white;
+	display: inline-block;
+	width: auto;
+	padding: 12px 25px;
+
+	&:hover {
+		color: white;
+		text-decoration: none;
+		background: darken($yellow, 10%);
+	}
+}
+
+// Flash messages --------------------------------------
+
+.alert {
+	margin: 10px 0 20px 0;
+	padding: 10px 20px;
+	background: $vvl_gray;
+	@include border-radius($border-radius);
+	border: 1px solid $vl_gray;
+}
+
+.alert-notice {
+	color: $green;
+}
+
+#flash_notice {
+	color: inherit;
+}
+
+// Other -----------------------------------------------
+

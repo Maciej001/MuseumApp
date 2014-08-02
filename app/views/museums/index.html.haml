@@ -1,0 +1,5 @@
+.container
+	%h1 List of Museums
+	= render partial: "museum", collection: @museums
+	%br/
+	= link_to "Add New Museum", new_museum_path, class: "btn btn-yellow btn-small" 

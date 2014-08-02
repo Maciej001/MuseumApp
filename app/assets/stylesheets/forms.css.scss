@@ -1,0 +1,117 @@
+label {
+	display: inline;
+	margin-bottom: 15px;
+	font-size: $form-font-size;
+	color: $vl_gray;
+}
+
+input {
+	font-size: $input-font-size;
+	height: $input_height;
+	width: $input_length;
+	@include border-radius(3px);
+	margin: 10px 0;
+	padding: 0 20px;
+	border: 1px solid $vl_gray;
+	outline: none;
+}
+
+// removing yellow autocomplete background in chrome
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input[type="checkbox"] {
+	height: 1.2rem;
+	width: 1.2rem;
+	margin-right: 10px;
+}
+
+input[type="submit"] {
+	border: none;
+}
+
+.form {
+	display: inline-block;
+	width: $form-width;
+	margin: 50px auto;
+	padding: 30px;
+	border: 1px solid rgba(255,255,255,0.15);
+	@include border-radius(3px);
+
+	.form-field {
+		display: inline;
+		@include pie-clearfix;
+		margin-bottom: 10px;
+	}
+
+	h3 {
+		margin-bottom: 20px;
+	}
+
+	p {
+		display: inline-block;
+		font-size: $form-font-size;
+		color: $vl_gray;
+	}
+}
+
+.sign-in-wrapper {
+	width: 100%;
+	height: 850px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.sign-up-wrapper {
+	width: 100%;
+	height: 850px;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.sign-up-statement {
+	margin-top: 20px;
+}
+
+// small info snippets in bottom part of the form
+.other-signup {
+	display: inline-block;
+	margin-top: 15px;
+	color: $blue;
+	font-size: $form-font-size;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.facebook-login {
+
+}
+ 
+.sign-in-form, .sign-up-form {
+	margin-top: 150px;
+	background: rgba(255,255,255,0.1);
+}
+.sign-separator {
+	display: inline-block;
+	margin-top: 10px;
+
+	h5 {
+		padding: 9px;
+		color: $vl_gray;
+	}
+
+}
+
+.form-album {
+	border: 1px solid $vl_gray;
+}
+
+.shared-links p {color: $vl_gray;}
+

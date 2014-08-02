@@ -1,0 +1,53 @@
+
+// Colors --------------------------------
+
+$dk_gray:		#333;
+$gray:			#555;
+$l_gray:		#999;
+$vl_gray:		#ccc;
+$vvl_gray:  #eee;
+
+$blue:			#498CD1;
+$vvl_blue:	#C1DAED;
+$dk_pink:		#C9275E;
+$pink:			#DE5282;
+
+$yellow: 			#FFC847;
+$dk_yellow: 	#FFAE47;
+
+$green: 			#21B82B;
+$dk_green:		#15731B;
+$l_green:			#75D67B;
+
+$red: 				#E54948;
+$dk_red:			#A63621;
+$l_red:				#DE6A55;
+
+// Susy setup ---------------------------------------------
+
+$total-columns: 				12;
+$column-width:    			4em;
+$gutter-width:   				1em;
+$grid-padding:          $gutter-width;
+
+
+// Dimensions -----------------------------
+
+$container-width	:800px;
+$header-height		:50px;
+$border-radius 		:2px;
+
+// Font sizes -----------------------------
+
+$input-font-size: 	1.2rem;
+
+// Forms --------------------------------
+
+
+$form-width: 						450px;
+$input_height: 					60px;
+$input_length: 					100%;
+$form_autocomplete_bg:	white;
+$hover-change: 					5%;
+
+$form-font-size:				1.2rem;

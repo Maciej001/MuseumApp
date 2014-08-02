@@ -1,0 +1,5 @@
+= form_for @museum do |f|
+	= render 'layouts/error_messages', object: f.object
+
+	= f.text_field :name, placeholder: "Museum Name"
+	= f.submit "Add Museum", class: "btn btn-yellow"

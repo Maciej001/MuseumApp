@@ -1,0 +1,14 @@
+.container
+	- if @museum.paintings.any?
+		%table
+			%tbody
+				%tr
+					%th Painting
+					%th Year 
+					%th Artist
+				= render partial: "paintings/painting", collection: @museum.paintings
+	- else
+		%h2 No paintings
+	
+	= link_to "Add New Painting", new_museum_painting_path(@museum), class: "btn btn-yellow btn-small" 
+	= debug params

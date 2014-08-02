@@ -1,0 +1,12 @@
+= form_for [:museum, @painting] do |f|
+
+	= render 'layouts/error_messages', object: f.object
+	= f.hidden_field :museum_id, value: @museum.id
+
+	= f.text_field :name, placeholder: "Painting Name"
+
+	= f.label :year
+	= f.select :year, (Time.zone.now.year - 500)..(Time.zone.now.year + 1)
+
+
+	= f.submit "Add Painting", class: "btn btn-yellow"

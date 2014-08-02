@@ -1,0 +1,82 @@
+ body {
+ 	@include box-sizing(content-box);
+ }
+
+.container {
+	display: block;
+	max-width: $container-width;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding: 0;
+
+	h1 {font-size: 2rem;}
+}
+
+.center {
+	
+	// centers forms elements in .container
+	text-align: center;
+	
+}
+
+.header {
+	height: $header-height;
+	background: rgba(0,0,0,0);
+		
+		.logo {
+			display: inline-block;
+			float: left;
+			h5 {
+				float: left;
+				color: white;
+				line-height: $header-height;
+			}
+		}		// logo
+
+		.user-login {
+			display: inline-block;
+			float: right;
+			vertical-align: center;
+
+			a {
+				float: right;
+				line-height: $header-height;
+				margin-left: 40px;
+				color: white;
+				font-size: 1.2rem;
+					
+				&:hover {
+					color: $vvl_blue;		
+				}
+			}
+		}
+} 			// header
+
+.header-home-page {
+	padding: 20px 40px;
+
+}
+
+// Profile Header 
+
+.header-profile {
+	padding: 0 40px;
+	margin-bottom: 40px;
+	background: $blue;
+	height: $header-height;
+
+	.nav-bar, .logo, .user-login {
+		height: inherit;
+	}
+
+	h5 {
+		line-height: $header-height;
+	}
+}
+
+
+
+
+
+
+
