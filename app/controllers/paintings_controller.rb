@@ -14,8 +14,16 @@ class PaintingsController < ApplicationController
 		redirect_to museum_path @painting.museum_id
 	end
 
+	def show
+		@painting = Painting.find(params[:id])
+	end
+
+	def index 
+		@paintings = Painting.all
+	end
+
 	private 
 		def painting_safe_params
-			params[:painting].permit(:name, :year, :museum_id)
+			params[:painting].permit(:name, :year, :museum_id, :image_url, :artist_id)
 		end
 end

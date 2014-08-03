@@ -1,0 +1,21 @@
+.container
+	%h1= "#{@artist.name} (#{@artist.born}-#{@artist.died})"
+
+	- if @artist.paintings
+		%table.museum
+			%tbody
+				%tr
+					%th Painting
+					%th Year 
+					%th Image
+					%th Museum
+				= render partial: "painting", collection: @artist.paintings
+	- else
+		%h2 No paintings
+
+	= link_to "Add Painting", new_painting_path, class: "btn btn-yellow btn-small"
+	
+	.home-links
+		= link_to "Museums", museums_path, class: "home-museums"
+		= link_to "Artists", artists_path, class: "home-artists"
+		= link_to "Paintings", paintings_path, class: "home-paintings"

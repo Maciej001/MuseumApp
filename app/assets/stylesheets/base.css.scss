@@ -17,7 +17,14 @@ a {
 	text-decoration: none; 
 	color: $blue;
 	&:hover {
+		color: darken($blue, 10%);
 		text-decoration: underline;
+	}
+}
+
+a h2 {
+	line-height: 100%;
+	&:hover {
 		color: darken($blue, 5%);
 	}
 }
@@ -82,7 +89,7 @@ a {
 	&:hover {
 		color: white;
 		text-decoration: none;
-		background: darken($yellow, 10%);
+
 	}
 }
 

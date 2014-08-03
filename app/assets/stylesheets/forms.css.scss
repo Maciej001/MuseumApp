@@ -1,3 +1,47 @@
+.museums {
+
+	display: inline-block;
+	width: 600px;
+}
+
+.painting img{
+	width: 150px;
+}
+
+.painting-big {
+	padding: 20px;
+	border: 1px solid $vl_gray;
+	@include border-radius(2px);
+	margin-top: 50px;
+	width: 400px;
+}
+tbody {
+	display: table;
+	width: 100%;
+}
+
+td {
+	text-align: center;
+	padding: 15px 10px 15px 15px;
+	border : 1px solid $vl_gray;
+
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+th {
+	text-align: left; 
+	padding: 15px 20px;
+	color: white;
+	background: $blue;
+	border : 1px solid darken($blue,5%);
+}
+
+
+
 label {
 	display: inline;
 	margin-bottom: 15px;
@@ -55,63 +99,3 @@ input[type="submit"] {
 		color: $vl_gray;
 	}
 }
-
-.sign-in-wrapper {
-	width: 100%;
-	height: 850px;
-	text-align: center;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-}
-
-.sign-up-wrapper {
-	width: 100%;
-	height: 850px;
-	text-align: center;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-}
-
-.sign-up-statement {
-	margin-top: 20px;
-}
-
-// small info snippets in bottom part of the form
-.other-signup {
-	display: inline-block;
-	margin-top: 15px;
-	color: $blue;
-	font-size: $form-font-size;
-
-	&:hover {
-		text-decoration: underline;
-	}
-}
-
-.facebook-login {
-
-}
- 
-.sign-in-form, .sign-up-form {
-	margin-top: 150px;
-	background: rgba(255,255,255,0.1);
-}
-.sign-separator {
-	display: inline-block;
-	margin-top: 10px;
-
-	h5 {
-		padding: 9px;
-		color: $vl_gray;
-	}
-
-}
-
-.form-album {
-	border: 1px solid $vl_gray;
-}
-
-.shared-links p {color: $vl_gray;}
-

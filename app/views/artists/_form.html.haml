@@ -1,0 +1,12 @@
+= form_for @artist do |f|
+
+	= render 'layouts/error_messages', object: f.object
+
+	= f.text_field :name, placeholder: "Artist Name"
+
+	= f.text_field :born, placeholder: "Year born"
+
+	= f.text_field :died, placeholder: "Year died"
+
+
+	= f.submit "Add Artist", class: "btn btn-yellow"

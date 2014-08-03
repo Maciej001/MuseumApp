@@ -1,3 +1,17 @@
 %tr
-	%td= link_to painting.name, painting
+	%td
+		= link_to painting.museum do
+			= painting.museum.name
+	%td
+		= link_to  painting do
+			= painting.name
+
+	%td= painting.year
+	%td
+		= link_to  painting.artist do
+			= painting.artist.name
+	%td.painting
+		= link_to  painting do 
+			= image_tag painting.image_url.to_s
+			
 

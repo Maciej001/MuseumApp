@@ -7,9 +7,17 @@
 	max-width: $container-width;
 	margin: 0 auto;
 	margin-top: 50px;
+	margin-bottom: 50px;
 	padding: 0;
 
-	h1 {font-size: 2rem;}
+	h1 {
+		font-size: 2rem;
+		margin-bottom: 50px;
+	}
+
+	h2 {
+		margin-bottom: 50px;
+	}
 }
 
 .center {
@@ -19,62 +27,80 @@
 	
 }
 
-.header {
-	height: $header-height;
-	background: rgba(0,0,0,0);
-		
-		.logo {
-			display: inline-block;
-			float: left;
-			h5 {
-				float: left;
-				color: white;
-				line-height: $header-height;
-			}
-		}		// logo
+.museum-header {
+	display: block;
+	margin-top: 10px;
+	@include pie-clearfix;
+}
 
-		.user-login {
-			display: inline-block;
-			float: right;
-			vertical-align: center;
+.museum-list {
+	h1 {
+		margin-bottom: 50px;
+	}
 
-			a {
-				float: right;
-				line-height: $header-height;
-				margin-left: 40px;
-				color: white;
-				font-size: 1.2rem;
-					
-				&:hover {
-					color: $vvl_blue;		
-				}
-			}
+	a {
+		display: block;
+		padding: 5px 0;
+	}
+}
+
+.artist-selection {
+	display: block;
+	width: 100%;
+	margin: 20px 0;
+
+	p {
+		padding: 20px;
+	}
+
+	a {
+		margin-top: 0;
+	}
+}
+
+.home-links {
+	margin-top: 50px;
+	
+
+	a {
+		@include border-radius($border-radius);
+		text-align: center;
+		display: inline-block;
+		color: white;
+		width: 170px;
+		height: 170px;
+		line-height: 170px;
+		text-decoration: none;
+		padding: 0;
+		margin:0;
+		&:hover {
+			text-decoration: none;
 		}
-} 			// header
-
-.header-home-page {
-	padding: 20px 40px;
-
+	}
 }
 
-// Profile Header 
+.home-museums {
+	background: $yellow;
+	border-right: 1px solid white;
+	&:hover {
+		background: darken($yellow, $hover-change);
+	}
+}
 
-.header-profile {
-	padding: 0 40px;
-	margin-bottom: 40px;
+.home-artists {
 	background: $blue;
-	height: $header-height;
-
-	.nav-bar, .logo, .user-login {
-		height: inherit;
-	}
-
-	h5 {
-		line-height: $header-height;
+	border-right: 1px solid white;
+	&:hover {
+		background: darken($blue, $hover-change);
 	}
 }
 
-
+.home-paintings {
+	background: $red;
+	&:hover {
+		background: darken($red, $hover-change);
+	}
+}
 
 
 

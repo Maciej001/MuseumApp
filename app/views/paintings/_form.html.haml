@@ -5,8 +5,15 @@
 
 	= f.text_field :name, placeholder: "Painting Name"
 
-	= f.label :year
-	= f.select :year, (Time.zone.now.year - 500)..(Time.zone.now.year + 1)
+	= f.select :year, (Time.zone.now.year - 500)..(Time.zone.now.year + 1), placeholder: "Year"
+	
+	.artist-selection
+		= f.label :artist_id
+		= f.collection_select(:artist_id, Artist.all.order('name'), :id, :name, prompt: true) 
+		%p or
+		= link_to "Add Artist", new_artist_path, class: "btn btn-blue btn-small"
+
+	= f.text_field :image_url, placeholder: "Image URL"
 
 
 	= f.submit "Add Painting", class: "btn btn-yellow"

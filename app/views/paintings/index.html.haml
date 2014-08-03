@@ -1,0 +1,21 @@
+.container
+	%h1 List of All Paintings
+	- if @paintings.any?
+		%table.museum
+			%tbody
+				%tr
+					%th Museum
+					%th Painting
+					%th Year 
+					%th Artist
+					%th Image
+				= render partial: "paintings/painting", collection: @paintings
+	- else
+		%h2 No paintings
+
+	= link_to "Add New Painting", new_painting_path, class: "btn btn-yellow btn-small"
+
+	.home-links
+		= link_to "Museums", museums_path, class: "home-museums"
+		= link_to "Artists", artists_path, class: "home-artists"
+		= link_to "Paintings", paintings_path, class: "home-paintings"

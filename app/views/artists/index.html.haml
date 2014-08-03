@@ -1,0 +1,16 @@
+.container
+	%h1 List of Artists
+	%table.museums
+		%tbody
+			%tr
+				%th Name
+				%th Born 
+				%th Died
+			= render partial: "artist", collection: @artists
+	%br/
+	= link_to "Add New Artist", new_artist_path, class: "btn btn-yellow btn-small" 
+
+	.home-links
+		= link_to "Museums", museums_path, class: "home-museums"
+		= link_to "Artists", artists_path, class: "home-artists"
+		= link_to "Paintings", paintings_path, class: "home-paintings"

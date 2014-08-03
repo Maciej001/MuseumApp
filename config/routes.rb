@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-root 'museums#new'
+root "static_pages#index"
 
 resources :museums do 
 	resources :paintings
