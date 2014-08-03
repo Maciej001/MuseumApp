@@ -8,5 +8,9 @@
 	= csrf_meta_tags
 
 %body
-	= yield
+	.container
+		.search
+			=render "paintings/search_form"
+
+		= yield
 

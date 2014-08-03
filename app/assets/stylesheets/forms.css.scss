@@ -21,7 +21,7 @@ tbody {
 }
 
 td {
-	text-align: center;
+	text-align: left;
 	padding: 15px 10px 15px 15px;
 	border : 1px solid $vl_gray;
 
@@ -78,8 +78,9 @@ input[type="submit"] {
 .form {
 	display: inline-block;
 	width: $form-width;
-	margin: 50px auto;
+	margin: 0 auto;
 	padding: 30px;
+	padding-left: 0;
 	border: 1px solid rgba(255,255,255,0.15);
 	@include border-radius(3px);
 
@@ -98,4 +99,20 @@ input[type="submit"] {
 		font-size: $form-font-size;
 		color: $vl_gray;
 	}
+}
+
+.search {
+	width: 650px;
+	margin-bottom: 20px;
+
+	input{
+		display: inline-block;
+		width: 250px; 
+	}
+
+	.btn {
+		width: 120px;
+	}
+
+
 }

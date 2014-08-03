@@ -1,9 +1,9 @@
 class PaintingsController < ApplicationController
 	def new
 		# calling new from museums passes museum_id, so let's create @museum
-		@museum = Museum.find(params[:museum_id])
+		# @museum = Museum.find(params[:museum_id])
 		@painting = Painting.new
-		@painting.museum_id = @museum.id
+		# @painting.museum_id = @museum.id
 	end
 
 	def create    
@@ -19,7 +19,8 @@ class PaintingsController < ApplicationController
 	end
 
 	def index 
-		@paintings = Painting.all
+		@paintings = Painting.search_for(params[:q])
+		# Tshirt.search_for(params[:q])
 	end
 
 	private 

@@ -1,10 +1,5 @@
-.container
-	.center
-		.form
-			%h1 Add New Museum
-			= render 'form'
+.form
+	%h1 Add New Museum
+	= render 'form'
 
-	.home-links
-		= link_to "Museums", museums_path, class: "home-museums"
-		= link_to "Artists", artists_path, class: "home-artists"
-		= link_to "Paintings", paintings_path, class: "home-paintings"
+= render 'static_pages/home_links'

@@ -2,7 +2,5 @@
 	.center
 		%h1 Welcome to Museum App
 		%h3 Browse Museums, Artists and Paintings
-		.home-links
-			= link_to "Museums", museums_path, class: "home-museums"
-			= link_to "Artists", artists_path, class: "home-artists"
-			= link_to "Paintings", paintings_path, class: "home-paintings"
+		
+		= render 'static_pages/home_links'

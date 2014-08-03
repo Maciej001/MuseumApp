@@ -1,11 +1,8 @@
-.container
-	.center
-		%h2= "#{@painting.name} (#{@painting.year})"
-		= link_to @painting.museum.name, @painting.museum, class: "museum-header"
-		- if @painting.image_url
-			=image_tag @painting.image_url.to_s, class: "painting-big"
 
-	.home-links
-		= link_to "Museums", museums_path, class: "home-museums"
-		= link_to "Artists", artists_path, class: "home-artists"
-		= link_to "Paintings", paintings_path, class: "home-paintings"
+.center
+	%h2= "#{@painting.name} (#{@painting.year})"
+	= link_to @painting.museum.name, @painting.museum, class: "museum-header"
+	- if @painting.image_url
+		=image_tag @painting.image_url.to_s, class: "painting-big"
+
+= render 'static_pages/home_links'

@@ -1,7 +1,7 @@
-= form_for [:museum, @painting] do |f|
+= form_for @painting do |f|
 
 	= render 'layouts/error_messages', object: f.object
-	= f.hidden_field :museum_id, value: @museum.id
+	/ = f.hidden_field :museum_id, value: @museum.id
 
 	= f.text_field :name, placeholder: "Painting Name"
 
@@ -15,5 +15,8 @@
 
 	= f.text_field :image_url, placeholder: "Image URL"
 
+	.artist-selection
+		= f.label :museum_id
+		= f.collection_select(:museum_id, Museum.all.order('name'), :id, :name, prompt: true)
 
 	= f.submit "Add Painting", class: "btn btn-yellow"

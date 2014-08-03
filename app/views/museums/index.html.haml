@@ -1,11 +1,7 @@
-.container
-	.museum-list
-		%h1 List of Museums
-		= render partial: "museum", collection: @museums
-		%br/
-	= link_to "Add New Museum", new_museum_path, class: "btn btn-yellow btn-small" 
+.museum-list
+	%h1 List of Museums
+	= render partial: "museum", collection: @museums
+	%br/
+= link_to "Add New Museum", new_museum_path, class: "btn btn-yellow btn-small" 
 
-	.home-links
-		= link_to "Museums", museums_path, class: "home-museums"
-		= link_to "Artists", artists_path, class: "home-artists"
-		= link_to "Paintings", paintings_path, class: "home-paintings"
+= render 'static_pages/home_links'

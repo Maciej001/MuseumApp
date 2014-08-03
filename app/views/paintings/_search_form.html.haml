@@ -1,0 +1,4 @@
+= form_tag("paintings#index", method: "get") do
+
+	= text_field_tag :q, nil, placeholder: "Search for Painting"
+	= submit_tag "Search", class: "btn btn-yellow btn-small"
