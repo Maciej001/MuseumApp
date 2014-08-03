@@ -1,8 +1,9 @@
 
 .center
 	%h2= "#{@painting.name} (#{@painting.year})"
-	= link_to @painting.museum.name, @painting.museum, class: "museum-header"
+	%h5= link_to @painting.artist.name, @painting.artist, class: "small-font"
+	%h5= link_to @painting.museum.name, @painting.museum, class: "small-font"
 	- if @painting.image_url
 		=image_tag @painting.image_url.to_s, class: "painting-big"
 
-= render 'static_pages/home_links'
+	= render 'static_pages/home_links'
