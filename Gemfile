@@ -5,7 +5,7 @@ gem 'rails', '4.1.4'
 gem 'devise'
 gem 'omniauth-facebook', '2.0.0.pre1'
 
-gem 'sqlite3'
+gem 'pg'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker'
 gem 'will_paginate'

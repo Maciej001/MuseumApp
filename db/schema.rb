@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140802131647) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "artists", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -37,7 +40,7 @@ ActiveRecord::Schema.define(version: 20140802131647) do
     t.integer  "artist_id"
   end
 
-  add_index "paintings", ["artist_id"], name: "index_paintings_on_artist_id"
-  add_index "paintings", ["museum_id"], name: "index_paintings_on_museum_id"
+  add_index "paintings", ["artist_id"], name: "index_paintings_on_artist_id", using: :btree
+  add_index "paintings", ["museum_id"], name: "index_paintings_on_museum_id", using: :btree
 
 end
